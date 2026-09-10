@@ -4,6 +4,7 @@ import Dashboard from './pages/Dashboard';
 import RequestIntake from './pages/RequestIntake';
 import RequestDetails from './pages/RequestDetails';
 import MyWork from './pages/MyWork';
+import ComingSoon from './pages/ComingSoon';
 
 function App() {
   return (
@@ -13,11 +14,11 @@ function App() {
         <Route path="/requests/new" element={<RequestIntake />} />
         <Route path="/requests/:id" element={<RequestDetails />} />
         <Route path="/my-work" element={<MyWork />} />
-        {/* other mock routes can just point to Dashboard for now */}
-        <Route path="/requests" element={<Dashboard />} />
-        <Route path="/employees" element={<Dashboard />} />
-        <Route path="/activity" element={<Dashboard />} />
-        <Route path="/settings" element={<Dashboard />} />
+        
+        <Route path="/requests" element={<ComingSoon title="All Requests" />} />
+        <Route path="/employees" element={<ComingSoon title="Employees" />} />
+        <Route path="/activity" element={<ComingSoon title="Activity Log" />} />
+        <Route path="/settings" element={<ComingSoon title="Settings" />} />
       </Routes>
     </BrowserRouter>
   );
